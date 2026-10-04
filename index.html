@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доска объявлений</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="container header-content">
+        <h1>Доска объявлений</h1>
+        <p>Покупайте и продавайте легко</p>
+    </div>
+</header>
+
+<main class="container">
+    <section class="form-section">
+        <h2>Добавить объявление</h2>
+        <form id="adForm">
+            <label for="title">Название</label>
+            <input id="title" name="title" type="text" placeholder="Например: Продаю ноутбук" required>
+
+            <label for="description">Описание</label>
+            <textarea id="description" name="description" placeholder="Опишите товар" required></textarea>
+
+            <label for="price">Цена, сом</label>
+            <input id="price" name="price" type="number" min="0" step="0.01" placeholder="30000" required>
+
+            <label for="image">Изображение</label>
+            <input id="image" name="image" type="file" accept="image/*" required>
+
+            <button type="submit">Опубликовать</button>
+            <p id="message" class="message"></p>
+        </form>
+    </section>
+
+    <section>
+        <div class="section-title">
+            <h2>Все объявления</h2>
+            <button id="refreshButton" class="secondary-button" type="button">Обновить</button>
+        </div>
+        <div id="ads" class="ads">
+            <p class="loading">Загрузка объявлений...</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Доска объявлений</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
